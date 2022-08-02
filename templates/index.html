@@ -1,0 +1,127 @@
+{% extends"layout.html" %}
+{% block body %}
+
+<body >
+   <!-- <div class="mj" style="background: url("{{ url_for('static', filename='mediatate.jpg') }});"> -->
+
+    <div class="min  text-center" class="Container">
+           <h1 style="color: white;">Lets Mediatate</h1>
+           <!-- <br><br><br><br><br> -->
+           <h5>Sit in a comfortable position.</h5>
+
+            <h5>Choose the pre-set time that works best for you.</h5>
+            
+            <h5>Close your eyes.</h5>
+            
+            <h5>Focus on your breathing</h5>
+            <h5>Open your eyes when music ends.</h5>
+           <audio id="mySong1" src="{{ url_for('static', filename='1min.mp3') }}"  type="audio/mp3"></audio>
+           <audio id="mySong2" src="{{ url_for('static', filename='2min.mp3') }}"  type="audio/mp3"></audio>
+           <audio id="mySong5" src="{{ url_for('static', filename='5min.mp3') }}"  type="audio/mp3"></audio>
+           <audio id="mySong10" src="{{ url_for('static', filename='10min.mp3') }}"  type="audio/mp3"></audio>
+           <audio id="mySong20" src="{{ url_for('static', filename='20min.mp3') }}"  type="audio/mp3"></audio>
+        <audio id="mySong30" src="{{ url_for('static', filename='30min.mp3') }}"  type="audio/mp3"></audio>
+        <button id="icon1" type="button" class="btn btn-secondary m-2">1 Minute </button> <br>
+        <button id="icon2"  type="button" class="btn btn-secondary m-2">2 Minute </button><br>
+        <button id="icon5" type="button" class="btn btn-secondary m-2">5 Minute </button><br>
+        <button id="icon10" type="button" class="btn btn-secondary m-2">10 Minute </button><br>
+        <button id="icon20" type="button" class="btn btn-secondary m-2">20 Minute </button><br>
+        <button id="icon30" type="button" class="btn btn-secondary m-2">30 Minute </button><br>
+        <br>
+        <script>
+            var mySong1 = document.getElementById("mySong1")
+            var icon1 = document.getElementById("icon1")
+            icon1.onclick = function(){
+                mySong2.pause();
+                mySong5.pause();
+                mySong10.pause();
+                mySong20.pause();
+                mySong30.pause();
+                if(mySong1.paused){
+                    mySong1.play();
+                }
+                else{
+                    mySong1.pause();
+                }
+            }
+            var mySong2 = document.getElementById("mySong2")
+            var icon2 = document.getElementById("icon2")
+            icon2.onclick = function(){
+                mySong1.pause();
+                mySong5.pause();
+                mySong10.pause();
+                mySong20.pause();
+                mySong30.pause();
+                if(mySong2.paused){
+                    mySong2.play();
+                }
+                else{
+                    mySong2.pause();
+                }
+            }
+            var mySong5 = document.getElementById("mySong5")
+            var icon5 = document.getElementById("icon5")
+            icon5.onclick = function(){
+                mySong2.pause();
+                mySong1.pause();
+                mySong10.pause();
+                mySong20.pause();
+                mySong30.pause();
+                if(mySong5.paused){
+                    mySong5.play();
+                }
+                else{
+                    mySong5.pause();
+                }
+            }
+            var mySong10 = document.getElementById("mySong10")
+            var icon10 = document.getElementById("icon10")
+            icon10.onclick = function(){
+                mySong2.pause();
+                mySong5.pause();
+                mySong1.pause();
+                mySong20.pause();
+                mySong30.pause();
+                if(mySong10.paused){
+                    mySong10.play();
+                }
+                else{
+                    mySong10.pause();
+                }
+            }
+            var mySong20 = document.getElementById("mySong20")
+            var icon20 = document.getElementById("icon20")
+            icon20.onclick = function(){
+                mySong2.pause();
+                mySong5.pause();
+                mySong10.pause();
+                mySong1.pause();
+                mySong30.pause();
+                if(mySong20.paused){
+                    mySong20.play();
+                }
+                else{
+                    mySong20.pause();
+                }
+            }
+            var mySong30 = document.getElementById("mySong30")
+            var icon30 = document.getElementById("icon30")
+            icon30.onclick = function(){
+                mySong2.pause();
+                mySong5.pause();
+                mySong10.pause();
+                mySong20.pause();
+                mySong1.pause();
+                if(mySong30.paused){
+                    mySong30.play();
+                }
+                else{
+                    mySong30.pause();
+                }
+            }
+        </script>
+    </div>
+</div>
+</body>
+{% endblock %}
+
