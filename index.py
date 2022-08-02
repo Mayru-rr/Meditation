@@ -38,4 +38,4 @@ def contact():
         db.session.add(entry)
         db.session.commit()    
     return render_template('contact.html')
-app.run(debug=True)
+app.run(debug=False, host='0.0.0.0')
